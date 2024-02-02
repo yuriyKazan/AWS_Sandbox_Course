@@ -23,7 +23,9 @@ import java.util.UUID;
 )
 public class ApiHandler implements RequestHandler<APIGatewayProxyRequestEvent, APIGatewayProxyResponseEvent> {
 
-	private static final String TABLE_NAME = "Events";
+	private static final String PREFIX = "cmtr-24bd7ee1-";
+	private static final String SUFFIX = "-test";
+	private static final String TABLE_NAME = PREFIX + "Events" + SUFFIX;
 	private static final int CREATED_CODE = 201;
 	private static final int INTERNAL_SERVER_CODE = 500;
 	private static final String ID = "id";
